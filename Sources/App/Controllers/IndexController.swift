@@ -24,9 +24,8 @@ final class IndexController {
             let upgradedValue = value.upgraded(newName: modelName)
             ouputModel = upgradedValue.swiftStructCode()
         } else {
-            ouputModel = ""
+            ouputModel = "Invalid JSON!"
         }
-        print(ouputModel)
         return try drop.view.make("index", [
             "jsonString": jsonString,
             "modelName": modelName,
