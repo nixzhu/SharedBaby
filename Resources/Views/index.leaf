@@ -1,0 +1,57 @@
+#extend("base")
+#export("head") {
+    #embed("title")
+    <style>
+    html, body {
+        height: 100%;
+    }
+    h1 {
+        color: red;
+    }
+    .container {
+        min-height: 100%;
+        position: relative;
+    }
+    .body {
+        padding-bottom: 50px;
+    }
+    textarea {
+        width: 600px;
+        height: 300px;
+    }
+    .prompt {
+        color: blue;
+        padding: 10px 0px 5px 0px;
+    }
+    pre {
+        border-color: lightgray;
+        border-style: dashed;
+        padding: 10px 10px 10px 10px;
+    }
+    .footer {
+        height: 20px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding-bottom: 10px;
+    }
+    </style>
+}
+#export("body") {
+    <div class="container">
+        <h1>Shared Baby</h1>
+        <div class="body">
+            <form action="/" method="get">
+                <div class="prompt">JSON String:</div>
+                <textarea name="json_string">#(jsonString)</textarea><br>
+                <div class="prompt">Model Name:</div>
+                <input type="text" name="model_name" value="#(modelName)"><br>
+                <div class="prompt">Try:</div>
+                <input type="submit" value="Generate">
+            </form>
+            <pre #(hidden)>#(model)</pre>
+        </div>
+        #embed("footer")
+    </div>
+}
