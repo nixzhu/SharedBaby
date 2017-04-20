@@ -17,20 +17,33 @@ final class IndexController {
                 return nil
             }
         }
+        func bool(forKey key: String) -> Bool? {
+            if let bool = request.query?[key]?.bool {
+                return bool
+            } else {
+                return nil
+            }
+        }
+        print("request.query: \(request.query)")
         let jsonString = string(forKey: "json_string") ?? ""
         let modelName = string(forKey: "model_name") ?? "Model"
+        let isPublic = string(forKey: "isPublic") == "on"
+        let jsonDictionaryName = string(forKey: "json_dictionary_name") ?? "[String: Any]"
         let ouputModel: String
         if let (value, _) = parse(jsonString) {
             let upgradedValue = value.upgraded(newName: modelName)
-            ouputModel = upgradedValue.swiftStructCode()
+            let meta = Meta(isPublic: isPublic, jsonDictionaryName: jsonDictionaryName)
+            ouputModel = upgradedValue.swiftStructCode(meta: meta)
         } else {
             ouputModel = jsonString.isEmpty ? "" : "Invalid JSON!"
         }
         return try drop.view.make("index", [
             "jsonString": jsonString,
             "modelName": modelName,
+            "jsonDictionaryName": jsonDictionaryName,
+            "isPublic": isPublic ? "checked" : "",
             "model": ouputModel,
-            "hidden": ouputModel.isEmpty ? "hidden" : "xxx",
+            "hidden": ouputModel.isEmpty ? "hidden" : "",
             "date": "\(Date())"
             ]
         )

@@ -10,8 +10,12 @@
             <form action="/" method="get">
                 <div class="prompt">JSON String:</div>
                 <textarea name="json_string">#(jsonString)</textarea><br>
+                <div class="prompt">Public</div>
+                <input type="checkbox" name="isPublic" #(isPublic)>
                 <div class="prompt">Model Name:</div>
                 <input type="text" name="model_name" value="#(modelName)"><br>
+                <div class="prompt">JSON Dictionary Name:</div>
+                <input type="text" name="json_dictionary_name" value="#(jsonDictionaryName)"><br>
                 <div class="prompt">Try:</div>
                 <input type="submit" value="Generate">
             </form>
