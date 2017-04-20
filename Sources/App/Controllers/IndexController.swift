@@ -17,14 +17,6 @@ final class IndexController {
                 return nil
             }
         }
-        func bool(forKey key: String) -> Bool? {
-            if let bool = request.query?[key]?.bool {
-                return bool
-            } else {
-                return nil
-            }
-        }
-        print("request.query: \(request.query)")
         let jsonString = string(forKey: "json_string") ?? ""
         let modelName = string(forKey: "model_name") ?? "Model"
         let isPublic = string(forKey: "isPublic") == "on"
