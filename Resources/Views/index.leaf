@@ -11,7 +11,7 @@
         </div>
 
         <div class="row">
-            <div class="six columns">
+            <div class="five columns">
                 <form action="/" method="get">
                     <div class="row">
                         <label for="jsonString">JSON String</label>
@@ -43,9 +43,9 @@
                 </form>
             </div>
 
-            <div class="six columns" #(hidden)>
+            <div class="seven columns" #(hidden)>
                 <label for="model">Model</label>
-                <pre>#(model)</pre>
+                <pre><code>#(model)</code></pre>
             </div>
         </div>
 

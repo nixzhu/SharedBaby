@@ -1,8 +1,6 @@
 textarea {
     height: 200px;
 }
-pre {
-    border-color: lightgray;
-    border-style: dashed;
-    padding: 10px 10px 10px 10px;
+pre > code {
+    white-space: pre-wrap;
 }
