@@ -3,10 +3,11 @@
     #embed("title")
 }
 #export("body") {
-    <div class="container">
+    <div class="main container">
         <div class="row">
             <div class="u-full-width">
-                <h1>Shared Baby</h1>
+                <h3>Shared Baby</h3>
+                <p>Create models from a JSON String, even a Baby can do it.</p>
             </div>
         </div>
 
@@ -44,11 +45,13 @@
             </div>
 
             <div class="seven columns" #(hidden)>
-                <label for="model">Model</label>
+                <label for="model">Swift Struct</label>
                 <pre><code>#(model)</code></pre>
             </div>
         </div>
+    </div>
 
+    <div class="footer container">
         <div class="row">
             <div class="u-full-width">
                 #embed("footer")

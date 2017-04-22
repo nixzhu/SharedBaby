@@ -1,3 +1,34 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body {
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+}
+.main {
+    margin: 0 auto;
+    padding-top: 64px;
+    width: 94%;
+}
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+}
+
+h3 {
+    margin-bottom: 1rem;
+}
 textarea {
     height: 200px;
 }
