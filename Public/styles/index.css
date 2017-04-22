@@ -1,39 +1,8 @@
-html, body {
-    height: 100%;
-}
-h1 {
-    color: #3AAEFA;
-}
-.container {
-    min-height: 100%;
-    position: relative;
-    font-family: 'San Francisco', Helvetica, Arial, san-serif;
-}
-.body {
-    padding-bottom: 60px;
-}
 textarea {
-    width: 600px;
-    height: 300px;
-}
-.prompt {
-    color: #F33F32;
-    padding: 10px 0px 5px 0px;
+    height: 200px;
 }
 pre {
     border-color: lightgray;
     border-style: dashed;
     padding: 10px 10px 10px 10px;
-}
-.footer {
-    color: gray;
-    height: 20px;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    padding-bottom: 25px;
-}
-a {
-    color: black;
 }

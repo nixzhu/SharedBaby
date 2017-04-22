@@ -1,26 +1,58 @@
 #extend("base")
 #export("head") {
     #embed("title")
-    <link rel="stylesheet" href="/styles/index.css">
 }
 #export("body") {
     <div class="container">
-        <h1>Shared Baby</h1>
-        <div class="body">
-            <form action="/" method="get">
-                <div class="prompt">JSON String:</div>
-                <textarea name="json_string">#(jsonString)</textarea><br>
-                <div class="prompt">Public</div>
-                <input type="checkbox" name="isPublic" #(isPublic)>
-                <div class="prompt">Model Name:</div>
-                <input type="text" name="model_name" value="#(modelName)"><br>
-                <div class="prompt">JSON Dictionary Name:</div>
-                <input type="text" name="json_dictionary_name" value="#(jsonDictionaryName)"><br>
-                <div class="prompt">Try:</div>
-                <input type="submit" value="Generate">
-            </form>
-            <pre #(hidden)>#(model)</pre>
+        <div class="row">
+            <div class="u-full-width">
+                <h1>Shared Baby</h1>
+            </div>
         </div>
-        #embed("footer")
+
+        <div class="row">
+            <div class="six columns">
+                <form action="/" method="get">
+                    <div class="row">
+                        <label for="jsonString">JSON String</label>
+                        <textarea class="u-full-width" name="json_string">#(jsonString)</textarea>
+                    </div>
+
+                    <div class="row">
+
+                    </div>
+
+                    <div class="row">
+                        <div class="two columns">
+                            <label for="public">Public</label>
+                            <input type="checkbox" name="isPublic" #(isPublic)>
+                        </div>
+                        <div class="four columns">
+                            <label for="modelName">Model Name</label>
+                            <input class="u-full-width" type="text" name="model_name" value="#(modelName)">
+                        </div>
+                        <div class="six columns">
+                            <label for="jsonDictionaryName">JSON Dictionary Name</label>
+                            <input class="u-full-width" type="text" name="json_dictionary_name" value="#(jsonDictionaryName)">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <input class="button-primary u-full-width" type="submit" value="Generate">
+                    </div>
+                </form>
+            </div>
+
+            <div class="six columns" #(hidden)>
+                <label for="model">Model</label>
+                <pre>#(model)</pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="u-full-width">
+                #embed("footer")
+            </div>
+        </div>
     </div>
 }
