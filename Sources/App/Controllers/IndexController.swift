@@ -17,14 +17,21 @@ final class IndexController {
                 return nil
             }
         }
-        let jsonString = string(forKey: "json_string") ?? ""
+        let jsonString = string(forKey: "json_string") ?? "{\n  \"name\": \"NIX\",\n  \"age\": 18\n}"
         let modelName = string(forKey: "model_name") ?? "Model"
         let isPublic = string(forKey: "isPublic") == "on"
+        let modelType = string(forKey: "modelType") ?? "struct"
+        let declareVariableProperties = string(forKey: "isVariable") == "on"
         let jsonDictionaryName = string(forKey: "json_dictionary_name") ?? "[String: Any]"
         let ouputModel: String
         if let (value, _) = parse(jsonString) {
             let upgradedValue = value.upgraded(newName: modelName)
-            let meta = Meta(isPublic: isPublic, jsonDictionaryName: jsonDictionaryName)
+            let meta = Meta(
+                isPublic: isPublic,
+                modelType: modelType,
+                declareVariableProperties: declareVariableProperties,
+                jsonDictionaryName: jsonDictionaryName
+            )
             ouputModel = upgradedValue.swiftStructCode(meta: meta)
         } else {
             ouputModel = jsonString.isEmpty ? "" : "Invalid JSON!"
@@ -34,6 +41,10 @@ final class IndexController {
             "modelName": modelName,
             "jsonDictionaryName": jsonDictionaryName,
             "isPublic": isPublic ? "checked" : "",
+            "modelType": modelType,
+            "isStructSelected": modelType == "struct" ? "selected" : "",
+            "isClassSelected": modelType == "class" ? "selected" : "",
+            "isVariable": declareVariableProperties ? "checked" : "",
             "model": ouputModel,
             "hidden": ouputModel.isEmpty ? "hidden" : "",
             "date": "\(Date())"

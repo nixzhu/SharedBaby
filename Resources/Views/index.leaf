@@ -20,16 +20,27 @@
                     </div>
 
                     <div class="row">
-
-                    </div>
-
-                    <div class="row">
-                        <div class="two columns">
+                        <div class="three columns">
                             <label for="public">Public</label>
                             <input type="checkbox" name="isPublic" #(isPublic)>
                         </div>
-                        <div class="four columns">
-                            <label for="modelName">Model Name</label>
+
+                        <div class="seven columns">
+                            <label for="variable">Variable Properties</label>
+                            <input type="checkbox" name="isVariable" #(isVariable)>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="three columns">
+                            <label for="modelType">Type</label>
+                            <select name="modelType" value="#(modelType)">
+                                <option value="struct" #(isStructSelected)>struct</option>
+                                <option value="class" #(isClassSelected)>class</option>
+                            </select>
+                        </div>
+                        <div class="three columns">
+                            <label for="modelName">Name</label>
                             <input class="u-full-width" type="text" name="model_name" value="#(modelName)">
                         </div>
                         <div class="six columns">
@@ -45,7 +56,7 @@
             </div>
 
             <div class="seven columns" #(hidden)>
-                <label for="model">Swift Struct</label>
+                <label for="model">Swift Code</label>
                 <pre><code>#(model)</code></pre>
             </div>
         </div>
