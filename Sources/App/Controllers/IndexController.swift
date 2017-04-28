@@ -17,7 +17,7 @@ final class IndexController {
                 return nil
             }
         }
-        let jsonString = string(forKey: "json_string") ?? "{\n  \"name\": \"NIX\",\n  \"age\": 18, \n  \"detail\": {\n    \"is_dog_lover\": true,\n    \"skills\": [\n      {\n      \"language\": \"Swift\",\n      \"platform\": \"iOS\"\n      },\n      {\n      \"language\": \"C\",\n      \"platform\": null\n      }\n    ]\n  }\n}"
+        let jsonString = string(forKey: "json_string") ?? "{\n  \"name\": \"NIX\",\n  \"age\": 18, \n  \"detail\": {\n    \"is_dog_lover\": true,\n    \"skills\": [\n      {\n        \"language\": \"Swift\",\n        \"platform\": \"iOS\"\n      },\n      {\n        \"language\": \"C\",\n        \"platform\": null\n      }\n    ]\n  }\n}"
         let modelName = string(forKey: "model_name") ?? "Model"
         let isPublic = string(forKey: "isPublic") == "on"
         let modelType = string(forKey: "modelType") ?? "struct"
