@@ -31,7 +31,10 @@ h3 {
 }
 textarea {
     height: 200px;
+    margin-top: 8px;
 }
 pre > code {
     white-space: pre-wrap;
+    margin-left: 0;
+    border-color: #D1D1D1;
 }
