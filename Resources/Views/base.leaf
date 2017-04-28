@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="/styles/nomalize.css">
     <link rel="stylesheet" href="/styles/skeleton.css">
     <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/xcode.css">
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </head>
     <body>
         #import("body")

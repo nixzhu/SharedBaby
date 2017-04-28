@@ -57,7 +57,7 @@
 
             <div class="seven columns" #(hidden)>
                 <label for="model">Swift Code</label>
-                <pre><code>#(model)</code></pre>
+                <pre><code class="swift">#(model)</code></pre>
             </div>
         </div>
     </div>
