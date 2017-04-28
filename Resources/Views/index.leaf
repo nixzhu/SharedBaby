@@ -12,22 +12,24 @@
         </div>
 
         <div class="row">
-            <div class="five columns">
-                <form action="/" method="get">
+            <form action="/" method="get">
+                <div class="six columns">
                     <div class="row">
                         <label for="jsonString">JSON String</label>
                         <textarea class="u-full-width" name="json_string">#(jsonString)</textarea>
                     </div>
+                </div>
 
+                <div class="six columns" #(hidden)>
                     <div class="row">
                         <div class="three columns">
                             <label for="public">Public</label>
-                            <input type="checkbox" name="isPublic" #(isPublic)>
+                            <input type="checkbox" name="isPublic" #(isPublic)/>
                         </div>
 
                         <div class="seven columns">
                             <label for="variable">Variable Properties</label>
-                            <input type="checkbox" name="isVariable" #(isVariable)>
+                            <input type="checkbox" name="isVariable" #(isVariable)/>
                         </div>
                     </div>
 
@@ -41,21 +43,23 @@
                         </div>
                         <div class="three columns">
                             <label for="modelName">Name</label>
-                            <input class="u-full-width" type="text" name="model_name" value="#(modelName)">
-                        </div>
+                            <input class="u-full-width" type="text" name="model_name" value="#(modelName)"/>
+                                </div>
                         <div class="six columns">
                             <label for="jsonDictionaryName">JSON Dictionary Name</label>
-                            <input class="u-full-width" type="text" name="json_dictionary_name" value="#(jsonDictionaryName)">
+                            <input class="u-full-width" type="text" name="json_dictionary_name" value="#(jsonDictionaryName)"/>
                         </div>
                     </div>
 
                     <div class="row">
-                        <input class="button-primary u-full-width" type="submit" value="Generate">
+                        <input class="button-primary u-full-width" type="submit" value="Generate"/>
                     </div>
-                </form>
-            </div>
+                </div>
+            </form>
+        </div>
 
-            <div class="seven columns" #(hidden)>
+        <div class="row">
+            <div class="u-full-width" #(hidden)>
                 <label for="model">Swift Code</label>
                 <pre><code class="swift">#(model)</code></pre>
             </div>
