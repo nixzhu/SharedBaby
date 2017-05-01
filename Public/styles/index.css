@@ -30,8 +30,13 @@ h3 {
     margin-bottom: 1rem;
 }
 textarea {
-    height: 147px;
     margin-top: 8px;
+}
+.jsonString {
+    height: 270px;
+}
+.propertyMap {
+    height: 65px;
 }
 pre > code {
     white-space: pre-wrap;

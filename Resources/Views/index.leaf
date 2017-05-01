@@ -16,7 +16,7 @@
                 <div class="six columns">
                     <div class="row">
                         <label for="jsonString">JSON String</label>
-                        <textarea class="u-full-width" name="json_string">#(jsonString)</textarea>
+                        <textarea class="u-full-width jsonString" name="json_string">#(jsonString)</textarea>
                     </div>
                 </div>
 
@@ -36,7 +36,7 @@
                     <div class="row">
                         <div class="three columns">
                             <label for="modelType">Type</label>
-                            <select name="modelType" value="#(modelType)">
+                            <select class="u-full-width" name="modelType" value="#(modelType)">
                                 <option value="struct" #(isStructSelected)>struct</option>
                                 <option value="class" #(isClassSelected)>class</option>
                             </select>
@@ -49,6 +49,11 @@
                             <label for="jsonDictionaryName">JSON Dictionary Name</label>
                             <input class="u-full-width" type="text" name="json_dictionary_name" value="#(jsonDictionaryName)"/>
                         </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="propertyMap">Property Map</label>
+                        <textarea class="u-full-width propertyMap" name="property_map">#(propertyMap)</textarea>
                     </div>
 
                     <div class="row">
