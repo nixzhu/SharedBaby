@@ -41,7 +41,7 @@ final class IndexController {
         }
         let ouputModel: String
         if let (value, _) = parse(jsonString) {
-            let upgradedValue = value.upgraded(newName: modelName, arrayObjectNameMap: arrayObjectMap)
+            let upgradedValue = value.upgraded(newName: modelName, arrayObjectMap: arrayObjectMap)
             let indentation = Indentation(level: 0, unit: "    ")
             let meta = Meta(
                 isPublic: isPublic,
@@ -49,7 +49,7 @@ final class IndexController {
                 declareVariableProperties: declareVariableProperties,
                 jsonDictionaryName: jsonDictionaryName,
                 propertyMap: propertyMap,
-                arrayObjectNameMap: arrayObjectMap
+                arrayObjectMap: arrayObjectMap
             )
             ouputModel = upgradedValue.swiftCode(indentation: indentation, meta: meta)
         } else {
