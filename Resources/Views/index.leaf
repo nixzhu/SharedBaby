@@ -52,8 +52,14 @@
                     </div>
 
                     <div class="row">
-                        <label for="propertyMap">Property Map</label>
-                        <textarea class="u-full-width propertyMap" name="property_map">#(propertyMap)</textarea>
+                        <div class="six columns">
+                            <label for="propertyMap">Property Map</label>
+                            <textarea class="u-full-width propertyMap" name="property_map">#(propertyMap)</textarea>
+                        </div>
+                        <div class="six columns">
+                            <label for="arrayObjectMap">Array Object Map</label>
+                            <textarea class="u-full-width propertyMap" name="array_object_map">#(arrayObjectMap)</textarea>
+                        </div>
                     </div>
 
                     <div class="row">

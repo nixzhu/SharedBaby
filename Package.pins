@@ -5,7 +5,7 @@
       "package": "Baby",
       "reason": null,
       "repositoryURL": "https://github.com/nixzhu/Baby.git",
-      "version": "0.10.0"
+      "version": "0.11.0"
     },
     {
       "package": "CLibreSSL",
