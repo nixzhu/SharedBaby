@@ -29,6 +29,9 @@ body {
 h3 {
     margin-bottom: 1rem;
 }
+.title {
+    text-decoration: none;
+}
 textarea {
     margin-top: 8px;
 }
