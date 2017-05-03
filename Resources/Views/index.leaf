@@ -43,11 +43,11 @@
                         </div>
                         <div class="three columns">
                             <label for="modelName">Name</label>
-                            <input class="u-full-width" type="text" name="model_name" value="#(modelName)"/>
+                            <input class="u-full-width" type="text" name="model_name" placeholder="Model" value="#(modelName)"/>
                                 </div>
                         <div class="six columns">
                             <label for="jsonDictionaryName">JSON Dictionary Name</label>
-                            <input class="u-full-width" type="text" name="json_dictionary_name" value="#(jsonDictionaryName)"/>
+                            <input class="u-full-width" type="text" name="json_dictionary_name" placeholder="[String: Any]" value="#(jsonDictionaryName)"/>
                         </div>
                     </div>
 
