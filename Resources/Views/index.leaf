@@ -20,7 +20,7 @@
                     </div>
                 </div>
 
-                <div class="six columns" #(hidden)>
+                <div class="six columns">
                     <div class="row">
                         <div class="three columns">
                             <label for="public">Public</label>
@@ -54,11 +54,11 @@
                     <div class="row">
                         <div class="six columns">
                             <label for="propertyMap">Property Map</label>
-                            <textarea class="u-full-width map" name="property_map">#(propertyMap)</textarea>
+                            <textarea class="u-full-width map" name="property_map" placeholder="is_dog_lover:likeDogs,skills:workSkills">#(propertyMap)</textarea>
                         </div>
                         <div class="six columns">
                             <label for="arrayObjectMap">Array Object Map</label>
-                            <textarea class="u-full-width map" name="array_object_map">#(arrayObjectMap)</textarea>
+                            <textarea class="u-full-width map" name="array_object_map" placeholder="skills:WorkSkill">#(arrayObjectMap)</textarea>
                         </div>
                     </div>
 

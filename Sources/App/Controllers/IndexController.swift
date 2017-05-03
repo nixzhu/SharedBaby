@@ -17,13 +17,13 @@ final class IndexController {
                 return nil
             }
         }
-        let jsonString = string(forKey: "json_string") ?? "{\n  \"name\": \"NIX\",\n  \"age\": 18, \n  \"detail\": {\n    \"is_dog_lover\": true,\n    \"skills\": [\n      {\n        \"language\": \"Swift\",\n        \"platform\": \"iOS\"\n      },\n      {\n        \"language\": \"C\",\n        \"platform\": null\n      }\n    ]\n  }\n}"
+        let jsonString = string(forKey: "json_string") ?? ""
         let modelName = string(forKey: "model_name") ?? "Model"
         let isPublic = string(forKey: "isPublic") == "on"
         let modelType = string(forKey: "modelType") ?? "struct"
         let declareVariableProperties = string(forKey: "isVariable") == "on"
         let jsonDictionaryName = string(forKey: "json_dictionary_name") ?? "[String: Any]"
-        let propertyMapString = string(forKey: "property_map") ?? "is_dog_lover:likeDogs,skills:workSkills"
+        let propertyMapString = string(forKey: "property_map") ?? ""
         var propertyMap: [String: String] = [:]
         propertyMapString.components(separatedBy: ",").forEach {
             let parts = $0.components(separatedBy: ":")
@@ -31,7 +31,7 @@ final class IndexController {
                 propertyMap[parts[0]] = parts[1]
             }
         }
-        let arrayObjectMapString = string(forKey: "array_object_map") ?? "skills:WorkSkill"
+        let arrayObjectMapString = string(forKey: "array_object_map") ?? ""
         var arrayObjectMap: [String: String] = [:]
         arrayObjectMapString.components(separatedBy: ",").forEach {
             let parts = $0.components(separatedBy: ":")
