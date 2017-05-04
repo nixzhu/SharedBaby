@@ -24,21 +24,9 @@ final class IndexController {
         let declareVariableProperties = string(forKey: "isVariable") == "on"
         let jsonDictionaryName = string(forKey: "json_dictionary_name") ?? "[String: Any]"
         let propertyMapString = string(forKey: "property_map") ?? ""
-        var propertyMap: [String: String] = [:]
-        propertyMapString.components(separatedBy: ",").forEach {
-            let parts = $0.components(separatedBy: ":")
-            if parts.count == 2 {
-                propertyMap[parts[0]] = parts[1]
-            }
-        }
+        let propertyMap = map(of: propertyMapString)
         let arrayObjectMapString = string(forKey: "array_object_map") ?? ""
-        var arrayObjectMap: [String: String] = [:]
-        arrayObjectMapString.components(separatedBy: ",").forEach {
-            let parts = $0.components(separatedBy: ":")
-            if parts.count == 2 {
-                arrayObjectMap[parts[0]] = parts[1]
-            }
-        }
+        let arrayObjectMap = map(of: arrayObjectMapString)
         let ouputModel: String
         if let (value, _) = parse(jsonString) {
             let upgradedValue = value.upgraded(newName: modelName, arrayObjectMap: arrayObjectMap)
