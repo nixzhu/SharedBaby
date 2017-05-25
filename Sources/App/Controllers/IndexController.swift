@@ -7,11 +7,13 @@ final class IndexController {
 
     func addRoutes(drop: Droplet) {
         drop.get("/", handler: index)
+        drop.post("/", handler: index)
     }
 
     func index(request: Request) throws -> ResponseRepresentable {
         func string(forKey key: String) -> String? {
-            if let string = request.query?[key]?.string {
+            //if let string = request.query?[key]?.string {
+            if let string = request.data[key]?.string {
                 return string.isEmpty ? nil : string
             } else {
                 return nil
