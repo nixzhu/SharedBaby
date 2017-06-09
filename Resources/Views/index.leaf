@@ -26,8 +26,12 @@
                             <label for="public">Public</label>
                             <input type="checkbox" name="isPublic" #(isPublic)/>
                         </div>
+                        <div class="three columns">
+                            <label for="codable">Codable</label>
+                            <input type="checkbox" name="codable" #(codable)/>
+                        </div>
 
-                        <div class="seven columns">
+                        <div class="six columns">
                             <label for="variable">Variable Properties</label>
                             <input type="checkbox" name="isVariable" #(isVariable)/>
                         </div>

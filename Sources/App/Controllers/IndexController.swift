@@ -22,6 +22,7 @@ final class IndexController {
         let jsonString = string(forKey: "json_string") ?? ""
         let modelName = string(forKey: "model_name") ?? "Model"
         let isPublic = string(forKey: "isPublic") == "on"
+        let codable = string(forKey: "codable") == "on"
         let modelType = string(forKey: "modelType") ?? "struct"
         let declareVariableProperties = string(forKey: "isVariable") == "on"
         let jsonDictionaryName = string(forKey: "json_dictionary_name") ?? "[String: Any]"
@@ -36,6 +37,7 @@ final class IndexController {
             let meta = Meta(
                 isPublic: isPublic,
                 modelType: modelType,
+                codable: codable,
                 declareVariableProperties: declareVariableProperties,
                 jsonDictionaryName: jsonDictionaryName,
                 propertyMap: propertyMap,
@@ -52,6 +54,7 @@ final class IndexController {
             "propertyMap": propertyMapString,
             "arrayObjectMap": arrayObjectMapString,
             "isPublic": isPublic ? "checked" : "",
+            "codable": codable ? "checked" : "",
             "modelType": modelType,
             "isStructSelected": modelType == "struct" ? "selected" : "",
             "isClassSelected": modelType == "class" ? "selected" : "",
