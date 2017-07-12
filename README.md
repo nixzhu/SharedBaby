@@ -1,15 +1,13 @@
-# Basic Template
+# SharedBaby
 
-A basic vapor template for starting a new Vapor web application. If you're using vapor toolbox, you can use: `vapor new --template=basic`
+SharedBaby is the [Baby](https://github.com/nixzhu/Baby)'s web interface.
 
-## 📖 Documentation
+## Run
 
-Visit the Vapor web framework's [documentation](http://docs.vapor.codes) for instructions on how to use this package.
+You may need to install Vapor Toolbox first.
 
-## 💧 Community
+``` bash
+$ vapor run
+```
 
-Join the welcoming community of fellow Vapor developers in [slack](http://vapor.team).
-
-## 🔧 Compatibility
-
-This package has been tested on macOS and Ubuntu.
+Then, open [http://localhost:8080](http://localhost:8080) in your browser.
