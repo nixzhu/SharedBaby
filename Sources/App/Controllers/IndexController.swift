@@ -48,7 +48,7 @@ final class IndexController {
             ouputModel = jsonString.isEmpty ? "" : "Invalid JSON!"
         }
         return try drop.view.make("index", [
-            "jsonString": jsonString,
+            "jsonString": format(jsonString: jsonString) ?? jsonString,
             "modelName": modelName,
             "jsonDictionaryName": jsonDictionaryName,
             "propertyMap": propertyMapString,
@@ -64,5 +64,13 @@ final class IndexController {
             "date": "\(Date())"
             ]
         )
+    }
+
+    private func format(jsonString: String) -> String? {
+        if let (value, _) = parse(jsonString) {
+            return value.prettyPrinted(indentation: Indentation(level: 0, unit: "  "))
+        } else {
+            return nil
+        }
     }
 }
